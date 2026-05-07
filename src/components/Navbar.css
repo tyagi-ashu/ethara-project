@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&display=swap');
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    height: 60px;
+    background-color: #0f0f0f;
+    border-bottom: 1px solid #1e1e1e;
+    font-family: 'DM Sans', sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.4);
+}
+
+#navbar-username {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.8rem;
+    color: #555;
+    letter-spacing: 0.04em;
+    margin: 0;
+    text-transform: lowercase;
+}
+
+#navbar-username::before {
+    content: '→ ';
+    color: #3b82f6;
+}
+
+#navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#login-link {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #888;
+    text-decoration: none;
+    padding: 0.4rem 0.9rem;
+    border-radius: 6px;
+    border: 1px solid #2a2a2a;
+    transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+    letter-spacing: 0.02em;
+}
+
+#login-link:hover {
+    color: #f1f1f1;
+    border-color: #3a3a3a;
+    background-color: #1a1a1a;
+}
+
+#register-link {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #3b82f6;
+    text-decoration: none;
+    padding: 0.4rem 0.9rem;
+    border-radius: 6px;
+    border: 1px solid #1d3f6e;
+    background-color: rgba(59, 130, 246, 0.07);
+    transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+    letter-spacing: 0.02em;
+}
+
+#register-link:hover {
+    background-color: rgba(59, 130, 246, 0.15);
+    border-color: #3b82f6;
+    color: #93c5fd;
+}
+
+#logout-btn {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #888;
+    background: transparent;
+    border: 1px solid #2a2a2a;
+    padding: 0.4rem 0.9rem;
+    border-radius: 6px;
+    cursor: pointer;
+    letter-spacing: 0.02em;
+    transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+#logout-btn:hover {
+    color: #ef4444;
+    border-color: #5a1e1e;
+    background-color: rgba(239, 68, 68, 0.08);
+}
+
+#logout-btn:active {
+    transform: scale(0.97);
+}

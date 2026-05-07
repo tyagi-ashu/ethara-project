@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&display=swap');
+
+#addtask-page {
+    min-height: calc(100vh - 60px);
+    background-color: #0f0f0f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Sans', sans-serif;
+    gap: 1.5rem;
+}
+
+#addtask-projects-link {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0.4rem 0.9rem;
+    border-radius: 6px;
+    letter-spacing: 0.02em;
+    color: #888;
+    border: 1px solid #2a2a2a;
+    transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+#addtask-projects-link:hover {
+    color: #f1f1f1;
+    border-color: #3a3a3a;
+    background-color: #1a1a1a;
+}
+
+#addtask-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    width: 100%;
+    max-width: 400px;
+    padding: 2.5rem;
+    background-color: #141414;
+    border: 1px solid #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+}
+
+#addtask-title,
+#addtask-description,
+#addtask-duedate,
+#addtask-priority,
+#addtask-member {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.85rem;
+    color: #f1f1f1;
+    background-color: #0f0f0f;
+    border: 1px solid #2a2a2a;
+    border-radius: 6px;
+    padding: 0.65rem 0.9rem;
+    outline: none;
+    letter-spacing: 0.02em;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#addtask-title::placeholder,
+#addtask-description::placeholder {
+    color: #444;
+}
+
+#addtask-title:focus,
+#addtask-description:focus,
+#addtask-duedate:focus,
+#addtask-priority:focus,
+#addtask-member:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Date input icon color fix */
+#addtask-duedate::-webkit-calendar-picker-indicator {
+    filter: invert(0.5);
+    cursor: pointer;
+}
+
+/* Select dropdown styling */
+#addtask-priority option,
+#addtask-member option {
+    background-color: #141414;
+    color: #f1f1f1;
+}
+
+#addtask-submit {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #3b82f6;
+    border: 1px solid #3b82f6;
+    border-radius: 6px;
+    padding: 0.65rem 0.9rem;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+    margin-top: 0.25rem;
+    transition: background-color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
+}
+
+#addtask-submit:hover {
+    background-color: #2563eb;
+    border-color: #2563eb;
+}
+
+#addtask-submit:active {
+    transform: scale(0.97);
+}
+
+#addtask-submit:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#addtask-error {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.78rem;
+    color: #ef4444;
+    background-color: rgba(239, 68, 68, 0.08);
+    border: 1px solid #5a1e1e;
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+    margin: 0;
+    letter-spacing: 0.02em;
+}
+
+#addtask-error::before {
+    content: '! ';
+}
+
+#addtask-unauthorized {
+    font-family: 'DM Mono', monospace;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #ef4444;
+    letter-spacing: -0.02em;
+}
+
+#addtask-unauthorized::before {
+    content: '// ';
+    color: #5a1e1e;
+}

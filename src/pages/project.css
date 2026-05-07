@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&display=swap');
+
+#projects-page {
+    min-height: calc(100vh - 60px);
+    background-color: #0f0f0f;
+    font-family: 'DM Sans', sans-serif;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/* ── Inputs & Selects ── */
+input[type='text'], select {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.85rem;
+    color: #f1f1f1;
+    background-color: #141414;
+    border: 1px solid #2a2a2a;
+    border-radius: 6px;
+    padding: 0.6rem 0.85rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type='text']::placeholder {
+    color: #444;
+}
+
+input[type='text']:focus, select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+select option {
+    background-color: #141414;
+}
+
+/* ── Buttons ── */
+button {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.6rem 0.9rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #3b82f6;
+    border: 1px solid #3b82f6;
+}
+
+.btn-primary:hover {
+    background-color: #2563eb;
+}
+
+.btn-danger {
+    color: #888;
+    background: transparent;
+    border: 1px solid #2a2a2a;
+}
+
+.btn-danger:hover {
+    color: #ef4444;
+    border-color: #5a1e1e;
+    background-color: rgba(239, 68, 68, 0.08);
+}
+
+button:active { transform: scale(0.97); }
+
+/* ── Forms ── */
+.form-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+/* ── Project Card ── */
+#projects-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.project-item {
+    background-color: #141414;
+    border: 1px solid #1e1e1e;
+    border-radius: 10px;
+    padding: 1.25rem;
+}
+
+.project-name {
+    font-family: 'DM Mono', monospace;
+    font-size: 1rem;
+    color: #f1f1f1;
+    margin: 0 0 0.25rem 0;
+}
+
+.project-name::before { content: '// '; color: #3b82f6; }
+
+.project-creator {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.78rem;
+    color: #555;
+    margin: 0 0 1rem 0;
+}
+
+.project-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.add-task-link {
+    font-size: 0.82rem;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0.35rem 0.8rem;
+    border-radius: 6px;
+    color: #3b82f6;
+    border: 1px solid #1d3f6e;
+    background-color: rgba(59, 130, 246, 0.07);
+    transition: all 0.2s ease;
+}
+
+.add-task-link:hover {
+    background-color: rgba(59, 130, 246, 0.15);
+    border-color: #3b82f6;
+}
+
+/* ── Tasks ── */
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    background-color: #0f0f0f;
+    border: 1px solid #1e1e1e;
+    margin-bottom: 0.4rem;
+}
+
+.task-info {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.8rem;
+    color: #888;
+    margin: 0;
+}
+
+/* ── Misc ── */
+#not-admin {
+    font-family: 'DM Mono', monospace;
+    font-size: 1.5rem;
+    color: #ef4444;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+#not-admin::before { content: '// '; color: #5a1e1e; }
+
+.form-error {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.78rem;
+    color: #ef4444;
+}
+
+.form-error::before { content: '! '; }
