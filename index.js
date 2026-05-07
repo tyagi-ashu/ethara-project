@@ -55,8 +55,4 @@ app.use('/users',userRoutes);
 app.use('/tasks',taskRoutes);
 app.use('/projects',projectRoutes);
 
-app.get("/*splat", (req, res) => {
-    res.sendFile(path.join(import.meta.dirname, "index.html"));
-});
-
 app.listen(process.env.PORT || 5000, () => console.log("Server on port 5000"));
