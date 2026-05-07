@@ -1,16 +1,64 @@
-# React + Vite
+# Ethara
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A task management web application built with the MERN stack.
 
-Currently, two official plugins are available:
+## About
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Ethara is a simple project and task management tool where admins can create projects, assign tasks to members, and track their progress. Members can log in to view their assigned tasks and update their status.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- User authentication with session management
+- Role based access — admin and member
+- Admins can create and delete projects
+- Admins can add members to projects
+- Admins can create and assign tasks with priority and due date
+- Members can view their assigned tasks and update task status
+- Task filtering by status and overdue date
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend** — React, Redux Toolkit, RTK Query, React Router
+- **Backend** — Node.js, Express
+- **Database** — MongoDB Atlas, Mongoose
+- **Auth** — Passport.js, express-session
+
+## Getting Started
+
+### Prerequisites
+- Node.js
+- MongoDB
+
+### Installation
+
+```bash
+git clone https://github.com/tyagi-ashu/ethara-project.git
+cd ethara-project
+npm install
+```
+
+### Environment Variables
+
+Create a `.env` file in the root:
+
+```
+DB_URL=mongodb://127.0.0.1:27017/ethara
+SECRET=yoursecret
+CLIENT_URL=http://localhost:5173
+NODE_ENV=development
+```
+
+### Run
+
+```bash
+# backend
+node index.js
+
+# frontend
+npm run dev
+```
+
+## Deployment
+
+- Backend hosted on Railway
+- Frontend hosted on Railway
