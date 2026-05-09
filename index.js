@@ -30,8 +30,10 @@ app.use(
         credentials: true
     })
 );
+app.set('trust proxy', 1);
 const secret = process.env.SECRET || 'thisisasecret'
 app.use(session({
+    name: 'ethara.sid',
     store: MongoStore.create({mongoUrl: dbUrl, dbName: 'ethara'}),
     secret: secret,
     resave: false,
@@ -39,7 +41,7 @@ app.use(session({
     cookie: {maxAge: 1000 * 60 * 60 * 24,
             httpOnly: true,
             secure: process.env.NODE_ENV === 'production',
-            sameSite: 'strict'
+            sameSite: 'none'
     }
 }));
 
